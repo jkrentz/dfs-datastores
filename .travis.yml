@@ -1,17 +1,4 @@
-# See this guide for more settings:
-#
-# http://about.travis-ci.org/docs/user/build-configuration/
-
-# See this guide for more settings:
-#
-# http://about.travis-ci.org/docs/user/build-configuration/
-
-language: clojure
-lein: lein2
-script: lein2 sub junit
-before_install: lein2 sub install
+language: java
+script: mvn clean verify
 jdk:
-  - openjdk6
-notifications:
-  email:
-    - soren@dopeness.org
+  - openjdk8
